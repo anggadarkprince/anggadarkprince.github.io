@@ -846,8 +846,7 @@ section .social li a.link-github {
     }
 
     .flex-caption {
-        bottom: 0;
-        padding: 10px;
+        visibility: hidden;
     }
 
     .navbar-toggle {
