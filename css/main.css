@@ -239,11 +239,11 @@ h1.logo {
     font-family: "Open Sans Bold", Verdana, Arial, sans-serif;
 }
 
-.about .social {
+section .social {
     margin-top: 10px;
 }
 
-.about .social li a {
+section .social li a {
     padding: 5px;
     font-size: 18px;
     color: #ffffff;
@@ -258,24 +258,28 @@ h1.logo {
     text-align: center;
 }
 
-.about .social li a.link-facebook {
+section .social li a.link-facebook {
     background: #1079db;
 }
 
-.about .social li a.link-twitter {
+section .social li a.link-twitter {
     background: #5bc3ff;
 }
 
-.about .social li a.link-google {
+section .social li a.link-google {
     background: #f14646;
 }
 
-.about .social li a.link-behance {
+section .social li a.link-behance {
     background: #4696f1;
 }
 
-.about .social li a.link-linkedin {
+section .social li a.link-linkedin {
     background: #4879b0;
+}
+
+section .social li a.link-github {
+    background: #555555;
 }
 
 .about p.signature {
@@ -346,6 +350,23 @@ h1.logo {
 
 .faq li {
     margin-bottom: 20px;
+}
+
+/* Hire Me */
+.hire-me{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.hire-me li{
+    line-height: 25px;
+}
+.hire-me h1{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.hire-me h4{
+    margin-top: 30px;
 }
 
 /* Contact */
