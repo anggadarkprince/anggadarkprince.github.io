@@ -199,5 +199,4 @@ jQuery(window).load(function () {
 jQuery(window).resize(function () {
     jQuery("#header").sticky('update');
     jQuery('body').scrollspy('refresh');
-
 });
