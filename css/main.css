@@ -493,7 +493,7 @@ section .social li a.link-github {
     -o-border-radius: 0;
     -ms-border-radius: 0;
     outline: none;
-    height: 40px;
+    height: 36px;
 }
 
 #footer .subscribe .btn-invert {
