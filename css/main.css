@@ -171,8 +171,8 @@ h1.logo {
 
 .profile .avatar img {
     flex-shrink: 0;
-    max-width: 100%;
-    min-height: 100%;
+	min-width : 100%;
+	transform: scale(.75, .75);
 }
 
 .profile .name {
@@ -836,6 +836,10 @@ section .social li a.link-github {
         height: 140px;
         width: 140px;
     }
+	
+	.profile .avatar img {		
+		transform: scale(0.65, 0.65);
+	}
 
     .profile .name {
         margin-top: 20px;
@@ -956,6 +960,11 @@ section .social li a.link-github {
         -o-transform:translate(-50%,-50%);
         text-align: center;
     }
+	
+	.profile .avatar img {		
+		max-width: 100%;
+		transform: scale(1, 1);
+	}
 
     .profile .name {
         font-size: 35px;
