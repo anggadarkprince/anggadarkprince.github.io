@@ -1,2 +1,2 @@
-# angga.github.io
-The secondary official website http://angga.github.io duplicate of http://angga-ari.com
+# anggadarkprince.github.io
+The secondary official website https://anggadarkprince.github.io duplicate of https://angga-ari.com
