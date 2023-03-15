@@ -177,6 +177,7 @@ h1.logo {
 
 .profile .name {
     font-size: 35px;
+    font-weight: 600;
     color: #ffffff;
     margin-top: 40px;
     float: left;
