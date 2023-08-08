@@ -18,10 +18,10 @@ navLink.forEach((n) => n.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
 }));
 
-const sections = document.querySelectorAll("section[id]");
-
 
 /*---------- ACTIVE MENU ----------*/
+const sections = document.querySelectorAll("section[id]");
+
 function scrollActive() {
     const scrollY = window.scrollY;
 

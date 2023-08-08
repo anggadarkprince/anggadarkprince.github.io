@@ -548,7 +548,7 @@ a.experience__subtitle:hover {
     position: absolute;
     content: '';
     border-radius: 1rem;
-    background-image: url("../img/wave.png");
+    background-image: url("./img/wave.png");
     background-position: bottom center;
     width: 100%;
     height: 100%;
@@ -757,7 +757,7 @@ a.experience__subtitle:hover {
         position: absolute;
         content: '';
         border-radius: 0.4rem;
-        background-image: url("../img/wave.png");
+        background-image: url("./img/wave.png");
         background-position: bottom center;
         width: 100%;
         height: 50%;
