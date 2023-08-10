@@ -1,0 +1,13 @@
+{
+    "name": "anggadarkprince/landing",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Angga Ari Wijaya",
+            "email": "anggadarkprince@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}

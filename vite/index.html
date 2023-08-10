@@ -514,30 +514,35 @@
           </div>
         </div>
 
-        <form action="" class="contact__form grid">
-          <div class="contact__inputs grid">
-            <div class="contact__input-group">
-              <label for="input-name" class="contact__label">Name</label>
-              <input type="text" class="contact__input" id="input-name" placeholder="Your full name">
+        <form class="contact__form grid" id="contact-form">
+          <div class="alert" id="contact-form-message" style="display: none">
+            Your message successfully submitted
+          </div>
+          <fieldset>
+            <div class="contact__inputs grid">
+              <div class="contact__input-group">
+                <label for="input-name" class="contact__label">Name</label>
+                <input type="text" class="contact__input" id="input-name" placeholder="Your full name" name="name" required maxlength="30">
+              </div>
+              <div class="contact__input-group">
+                <label for="input-email" class="contact__label">Email</label>
+                <input type="email" class="contact__input" id="input-email" placeholder="Email address" name="email" maxlength="50">
+              </div>
             </div>
             <div class="contact__input-group">
-              <label for="input-email" class="contact__label">Email</label>
-              <input type="email" class="contact__input" id="input-email" placeholder="Email address">
+              <label for="input-project" class="contact__label">Project</label>
+              <input type="text" class="contact__input" id="input-project" placeholder="Something you want to build" name="project" maxlength="50">
             </div>
-          </div>
-          <div class="contact__input-group">
-            <label for="input-project" class="contact__label">Project</label>
-            <input type="text" class="contact__input" id="input-project" placeholder="Something you want to build">
-          </div>
-          <div class="contact__input-group">
-            <label for="input-message" class="contact__label">Message</label>
-            <textarea name="message" id="input-message" cols="0" rows="7" class="contact__input" placeholder="Tell me about it"></textarea>
-          </div>
-          <div class="contact__input-button">
-            <button type="submit" class="button">
-              Send Message
-            </button>
-          </div>
+            <div class="contact__input-group">
+              <label for="input-message" class="contact__label">Message</label>
+              <textarea name="message" id="input-message" cols="0" rows="7" class="contact__input" placeholder="Tell me about it" required maxlength="1000"></textarea>
+            </div>
+            <div class="contact__input-button">
+              <button type="submit" class="button">
+                Send Message
+              </button>
+            </div>
+          </fieldset>
         </form>
       </div>
     </section>

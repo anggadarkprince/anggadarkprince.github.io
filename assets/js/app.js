@@ -106,3 +106,47 @@ if (!selectedTheme) {
         setTheme('light');
     }
 }
+
+/*---------- CONTACT FORM ----------*/
+const contactForm = document.getElementById("contact-form");
+const contactFormMessage = document.getElementById("contact-form-message");
+const contactFieldset = contactForm.getElementsByTagName('fieldset').item(0);
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const data = new URLSearchParams(new FormData(contactForm));
+    contactFormMessage.style.display = 'none';
+    contactFieldset.setAttribute('disabled', 'disabled');
+    fetch('https://angga-ari.com/contact.php', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            "Content-Type": 'application/x-www-form-urlencoded',
+            Accept: 'application/json',
+        },
+        body: data,
+    })
+        .then(response => {
+            if (!response.ok) {
+                return Promise.reject(response);
+            }
+            return response.json();
+        })
+        .then(response => {
+            console.info(response);
+            const inputElements = document.querySelectorAll('.contact__input');
+            Array.from(inputElements).forEach(item => {
+                item.value = '';
+            });
+            contactFormMessage.innerText = 'Your message successfully submitted';
+            contactFormMessage.style.display = 'block';
+            contactFormMessage.classList.remove('alert-error');
+            contactFieldset.removeAttribute('disabled');
+        })
+        .catch(err => {
+            console.error(err.response, err.message);
+            contactFormMessage.innerText = 'Something went wrong';
+            contactFormMessage.style.display = 'block';
+            contactFormMessage.classList.add('alert-error');
+            contactFieldset.removeAttribute('disabled');
+        });
+});

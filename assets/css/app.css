@@ -17,9 +17,10 @@
     --secondary-color: hsl(var(--hue-color-secondary), 69%, 61%);
     --secondary-color-alt: hsl(var(--hue-color-secondary), 70%, 55%);
     --secondary-color-lighter: hsl(var(--hue-color-secondary), 92%, 85%);
+    --error-color: #d54f4f;
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --text-color: hsl(var(--hue-color), 8%, 45%);
-    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --text-color-light: hsl(var(--hue-color), 8%, 70%);
     --input-color: hsl(var(--hue-color), 70%, 96%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
     --container-color: #fff;
@@ -79,6 +80,7 @@
 body.dark-theme {
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 75%);
+    --text-color-light: hsl(var(--hue-color), 8%, 40%);
     --input-color: hsl(var(--hue-color), 29%, 16%);
     --body-color: hsl(var(--hue-color), 28%, 12%);
     --container-color: hsl(var(--hue-color), 29%, 16%);
@@ -124,6 +126,9 @@ img {
     max-width: 100%;
     height: auto;
 }
+fieldset {
+    border: none;
+}
 
 /*==================== REUSABLE CLASSES ====================*/
 .section {
@@ -161,6 +166,13 @@ img {
     text-align: center;
     transition: 0.2s;
 }
+.button:disabled,
+.button.disabled,
+fieldset:disabled .button {
+    background-color: var(--primary-color-lighter);
+    pointer-events: none;
+    cursor: none;
+}
 .button:hover {
     background-color: var(--primary-color-alt);
 }
@@ -171,6 +183,11 @@ img {
 .button--white:hover {
     background-color: var(--primary-color-lighter);
 }
+.button--white:disabled,
+.button--white.disabled {
+    background-color: #f1f1f1;
+    color: var(--primary-color-lighter);
+}
 .color-primary {
     color: var(--primary-color);
 }
@@ -179,6 +196,18 @@ img {
 }
 .weight-semibold {
     font-weight: var(--font-semi-bold);
+}
+
+.alert {
+    font-size: var(--small-font-size);
+    padding: 10px 15px;
+    border-radius: 3px;
+    background: var(--primary-color);
+    color: var(--container-color);
+}
+
+.alert-error {
+    background: var(--error-color);
 }
 
 /*==================== LAYOUT ====================*/
@@ -608,7 +637,14 @@ a.experience__subtitle:hover {
 .contact__input:focus {
     border-color: var(--primary-color);
 }
-
+.contact__input::placeholder {
+    color: var(--text-color-light);
+}
+.contact__input:disabled,
+.contact__input.disabled,
+fieldset:disabled .contact__input {
+    background-color: var(--container-color-light);
+}
 
 /*==================== FOOTER ====================*/
 .footer {
