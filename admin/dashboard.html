@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="Angga Ari Wijaya">
+    <meta name="url" content="https://www.angga-ari.com">
+    <meta name="keyword" content="angga, ari, wijaya, personal, programmer, freelance, designer, illustrator, web, android, desktop, java, php, react, transcon, transcon indonesia">
+    <meta name="description" content="Angga Ari Wijaya personal website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#161A27">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Angga Ari Wijaya">
+    <meta itemprop="description" content="Angga Ari Wijaya personal website">
+    <meta itemprop="image" content="https://www.angga-ari.com/img/avatar.jpg">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@_anggaari">
+    <meta name="twitter:title" content="Angga Ari Wijaya">
+    <meta name="twitter:description" content="Angga Ari Wijaya personal website">
+    <meta name="twitter:creator" content="@_anggaari">
+    <meta name="twitter:image" content="https://www.angga-ari.com/assets/img/profile.jpg">
+
+    <!-- Open Graph description -->
+    <meta property="og:title" content="Angga Ari Wijaya">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.angga-ari.com/assets/img/profile.jpg">
+    <meta property="og:url" content="https://www.angga-ari.com">
+    <meta property="og:keyword" content="angga, ari, wijaya, personal, programmer, freelance, designer, illustrator, web, android, desktop, java, php, react, transcon, transcon indonesia">
+    <meta property="og:description" content="Angga Ari Wijaya personal website">
+
+    <title>Dashboard | Angga Ari Wijaya</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="../assets/img/favicon.png" rel="shortcut icon">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74498739-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-74498739-2');
+    </script>
+</head>
+<body>
+<main class="main">
+    <nav class="sidebar sidebar-collapse">
+        <a href="../index.html" class="nav__logo">
+            <img src="../assets/img/favicon.png" alt="Logo" class="mr-0-5">
+            <strong>Dash</strong>Board
+        </a>
+        <a href="../index.html" class="nav__logo-mini">
+            <img src="../assets/img/favicon.png" alt="Logo">
+        </a>
+        <div class="nav__user">
+            <img src="../assets/img/profile.jpg" alt="Profile" class="nav__avatar">
+            <div class="nav__user-info truncate">
+                <h4 class="nav__profile-name">Angga Ari Wijaya</h4>
+                <p class="nav__profile-email truncate">angga.aw92@gmail.com</p>
+            </div>
+        </div>
+        <ul class="nav__list">
+            <li class="nav__section">Main Menu</li>
+            <li class="nav__item">
+                <a href="#" class="nav__link active-link">
+                    <i class="nav__icon uil-estate"></i> <span class="nav__text">Home</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">
+                    <i class="nav__icon uil-user"></i> <span class="nav__text">About</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">
+                    <i class="nav__icon uil-file-alt"></i> <span class="nav__text">Expertises</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">
+                    <i class="nav__icon uil-bag"></i> <span class="nav__text">Experiences</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">
+                    <i class="nav__icon uil-image-plus"></i> <span class="nav__text">Showcases</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">
+                    <i class="nav__icon uil-at"></i> <span class="nav__text">Messages</span>
+                </a>
+            </li>
+            <li class="nav__section">Preferences</li>
+            <li class="nav__item">
+                <a href="#sub-setting" class="nav__link action-toggle collapsed">
+                    <i class="nav__icon uil-setting"></i>
+                    <span class="nav__text">Settings</span>
+                    <i class="nav__arrow"></i>
+                </a>
+                <ul class="nav__list collapse" id="sub-setting">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <i class="nav__icon uil-web-grid"></i> <span class="nav__text">General</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <i class="nav__icon uil-user-square"></i> <span class="nav__text">Account</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            <i class="nav__icon uil-lock"></i> <span class="nav__text">Password</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">
+                    <i class="nav__icon uil-signout color-aggressive"></i>
+                    <span class="nav__text color-aggressive">Sign Out</span>
+                </a>
+            </li>
+        </ul>
+        <div class="nav__footer mt-auto">
+            <button class="button button__white button__small" id="theme-button">
+                <i class="uil-moon"></i><span class="nav__text ml-0-5">Dark Theme</span>
+            </button>
+            <div class="nav__copyright">
+                <small class="mt-1 display-block line-height-1">&copy; 2023 all rights reserved</small>
+                <small class="text-fade text-smaller">Version 1.0 - builds 20230811</small>
+            </div>
+        </div>
+    </nav>
+    <section class="content-wrapper">
+        <header class="header">
+            <button type="button" class="button__menu-toggle">
+                <i class="uil-bars"></i>
+            </button>
+            <ul class="header__nav">
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">
+                        <i class="uil-search header__nav-icon"></i>
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">
+                        <i class="uil-inbox header__nav-icon"></i>
+                    </a>
+                </li>
+                <li class="header__nav-item dropdown notification__dropdown">
+                    <a href="#" class="header__nav-link dropdown__toggle">
+                        <i class="uil-comment-alt-dots header__nav-icon"></i>
+                    </a>
+                    <div class="dropdown__menu dropdown__menu-right notification__dropdown-menu overflow-hidden">
+                        <div class="display-flex flex-align-center flex-justify-between p-1 shadow position-relative">
+                            <h4>Notifications</h4>
+                            <a href="#">Mark all as read</a>
+                        </div>
+                        <div class="notification__dropdown-list">
+                            <a class="dropdown__item notification__dropdown-item" href="#">
+                                <p><strong>Herry</strong> send a message about project <string>Web Development</string></p>
+                                <small class="text-fade">1 hour ago</small>
+                            </a>
+                            <a class="dropdown__item notification__dropdown-item" href="#">
+                                <p><strong>Herry</strong> send a message about project <string>Web Development</string></p>
+                                <small class="text-fade">1 hour ago</small>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="header__nav-item dropdown">
+                    <a href="#" class="header__nav-link dropdown__toggle">
+                        <img src="../assets/img/profile.jpg" alt="Profile" class="header__nav-avatar">
+                        My Account
+                    </a>
+                    <div class="dropdown__menu dropdown__menu-right">
+                        <a class="dropdown__item" href="#"><i class="uil-user mr-0-25"></i> My Account</a>
+                        <a class="dropdown__item" href="#"><i class="uil-lock mr-0-25"></i> Change Password</a>
+                        <div class="dropdown__divider"></div>
+                        <a class="dropdown__item" href="../login.html"><i class="uil-signout mr-0-25"></i> Sign Out</a>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="mb-2">
+                <h1 class="section__title">Dashboard</h1>
+                <p class="section__subtitle">Insight about the website</p>
+            </div>
+            <div>
+                <div class="button__group mb-1">
+                    <a href="#" class="button button__small button__white active">12 Months</a>
+                    <a href="#" class="button button__small button__white">30 Days</a>
+                    <a href="#" class="button button__small button__white">7 Days</a>
+                    <a href="#" class="button button__small button__white display-none display-md-inline-block">24 Hours</a>
+                    <a href="#" class="button button__small button__white">All</a>
+                </div>
+                <div class="display-grid col-lg-3 gap-1 mb-2">
+                    <div class="card bg-primary color-white overflow-hidden p-0">
+                        <div class="px-2 pt-1">
+                            <h1 class="card__title mb-0-5">Visitor Hits <i class="uil-bolt-alt mr-0-5"></i></h1>
+                            <h2 class="text-h1 weight-medium line-height-1">12.334</h2>
+                        </div>
+                        <canvas id="chart-visitor" height="100px"></canvas>
+                        <a href="#" class="display-flex flex-align-center mt-auto px-2 pb-1">
+                            Visit Total <i class="uil-arrow-right ml-auto text-h3"></i>
+                        </a>
+                    </div>
+                    <div class="display-grid col-md-2 col-lg-1 gap-1">
+                        <div class="card">
+                            <h1 class="card__title"><i class="uil-image-plus mr-0-5"></i>Portfolio</h1>
+                            <h2 class="text-h2 weight-medium mt-auto">12</h2>
+                            <a href="#" class="display-flex flex-align-center text-fade">Projects <i class="uil-arrow-right ml-auto text-h3"></i></a>
+                        </div>
+                        <div class="card">
+                            <h1 class="card__title"><i class="uil-file-alt mr-0-5"></i>Expertises</h1>
+                            <h2 class="text-h2 weight-medium mt-auto">16</h2>
+                            <a href="#" class="display-flex flex-align-center text-fade">Skills <i class="uil-arrow-right ml-auto text-h3"></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h1 class="card__title"><i class="uil-bag mr-0-5"></i>Experiences</h1>
+                        <h2 class="text-h2 weight-medium mt-auto">3</h2>
+                        <a href="#" class="display-flex flex-align-center text-fade">Qualifications <i class="uil-arrow-right ml-auto text-h3"></i></a>
+                    </div>
+                </div>
+
+                <h4 class="mb-0-5">Contact Messages</h4>
+                <div class="form__input-group mb-0-5">
+                    <label class="uil-search form__input-icon" for="input-search"></label>
+                    <input type="search" name="search" class="form__input" id="input-search" placeholder="Search message...">
+                </div>
+                <table class="table table__border table__responsive mb-2">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Project</th>
+                        <th>Message</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Keenan Evander</td>
+                        <td>keenan.evander@gmail.com</td>
+                        <td>Mobile Design</td>
+                        <td>We need to develop e-commerce and support for mobile data...</td>
+                        <td><span class="label label__white">PENDING</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Diana Eka</td>
+                        <td>diana.wulanda@gmail.com</td>
+                        <td>Web Development</td>
+                        <td>Super app for laundry app...</td>
+                        <td><span class="label label__success">REPLIED</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Marry Fina</td>
+                        <td>merry@gmail.com</td>
+                        <td>Advertising</td>
+                        <td>Give me some advise</td>
+                        <td><span class="label label__error">REJECTED</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Agirna Wurana</td>
+                        <td>agirna@gmail.com</td>
+                        <td>UI Design</td>
+                        <td>We need wesome UI</td>
+                        <td><span class="label label__warning">HOLD</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    let width, height, gradient;
+    function getGradient(ctx, chartArea) {
+        const chartWidth = chartArea.right - chartArea.left;
+        const chartHeight = chartArea.bottom - chartArea.top;
+        if (!gradient || width !== chartWidth || height !== chartHeight) {
+            // Create the gradient because this is either the first render
+            // or the size of the chart has changed
+            width = chartWidth;
+            height = chartHeight;
+            gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+            gradient.addColorStop(0, '#5779e0');
+            gradient.addColorStop(0.5, '#4968c4');
+            gradient.addColorStop(1, '#4664bd');
+        }
+        return gradient;
+    }
+
+    const ctx = document.getElementById('chart-visitor');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16'],
+            datasets: [{
+                label: 'Hits',
+                data: [4, 8, 3, 5, 2, 3, 8, 5, 5, 7, 8, 10, 16, 14, 15, 17],
+                borderWidth: 2,
+                borderColor: '#fff',
+                tension: 0.4,
+                pointBackgroundColor: '#fff',
+                pointRadius: 0,
+                fill: {
+                    target: 'start',
+                    above: function(context) {
+                        const chart = context.chart;
+                        const {ctx, chartArea} = chart;
+
+                        if (!chartArea) {
+                            // This case happens on initial chart load
+                            return;
+                        }
+                        return getGradient(ctx, chartArea);
+                    },
+                }
+            }]
+        },
+        options: {
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    display: false,
+                    grid: {
+                        display: false,
+                    }
+                },
+                x: {
+                    display: false,
+                    grid: {
+                        display: false,
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+</script>
+<script src="../assets/js/admin.js"></script>
+</body>
+</html>
