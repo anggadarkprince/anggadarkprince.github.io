@@ -167,14 +167,14 @@
                                 <small class="text-fade">1 hour ago</small>
                             </a>
                             <a class="dropdown__item notification__dropdown-item" href="#">
-                                <p><strong>Herry</strong> send a message about project <string>Web Development</string></p>
+                                <p><strong>Bory</strong> send a message about project <string>Mobile App</string></p>
                                 <small class="text-fade">1 hour ago</small>
                             </a>
                         </div>
                     </div>
                 </li>
                 <li class="header__nav-item dropdown">
-                    <a href="#" class="header__nav-link dropdown__toggle">
+                    <a href="#" class="header__nav-link dropdown__toggle pr-0">
                         <img src="../assets/img/profile.jpg" alt="Profile" class="header__nav-avatar">
                         My Account
                     </a>
@@ -211,6 +211,10 @@
                             Visit Total <i class="uil-arrow-right ml-auto text-h3"></i>
                         </a>
                     </div>
+                    <div class="card">
+                        <h1 class="card__title mb-1"><i class="uil-bag mr-0-5"></i>Project Request</h1>
+                        <canvas id="chart-project" height="80px"></canvas>
+                    </div>
                     <div class="display-grid col-md-2 col-lg-1 gap-1">
                         <div class="card">
                             <h1 class="card__title"><i class="uil-image-plus mr-0-5"></i>Portfolio</h1>
@@ -222,11 +226,6 @@
                             <h2 class="text-h2 weight-medium mt-auto">16</h2>
                             <a href="#" class="display-flex flex-align-center text-fade">Skills <i class="uil-arrow-right ml-auto text-h3"></i></a>
                         </div>
-                    </div>
-                    <div class="card">
-                        <h1 class="card__title"><i class="uil-bag mr-0-5"></i>Experiences</h1>
-                        <h2 class="text-h2 weight-medium mt-auto">3</h2>
-                        <a href="#" class="display-flex flex-align-center text-fade">Qualifications <i class="uil-arrow-right ml-auto text-h3"></i></a>
                     </div>
                 </div>
 
@@ -304,8 +303,8 @@
         return gradient;
     }
 
-    const ctx = document.getElementById('chart-visitor');
-    new Chart(ctx, {
+    Chart.defaults.font.family = "Poppins, sans-serif";
+    new Chart(document.getElementById('chart-visitor'), {
         type: 'line',
         data: {
             labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16'],
@@ -361,6 +360,84 @@
             }
         }
     });
+
+    const chartProject = new Chart(document.getElementById('chart-project'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Web Development', 'Mobile App', 'UI/UX', 'Other'],
+            datasets: [{
+                label: 'Total',
+                data: [7, 5, 3, 2],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)',
+                    '#5779e0',
+                ],
+                borderWidth: 0,
+                borderColor: '#fff',
+            }]
+        },
+        options: {
+            aspectRatio: 2,
+            cutout: '60%',
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'right',
+                    align: 'left',
+                    title: {
+                        display: true,
+                        text: 'Projects',
+                        color: '#232529',
+                        position: 'start',
+                        padding: {
+                            left: 50
+                        },
+                        font: {
+                            size: 14,
+                            weight: 500,
+                        }
+                    },
+                    labels: {
+                        usePointStyle: true,
+                        boxWidth: 10,
+                        boxHeight: 10,
+                        padding: 20,
+                        textAlign: 'left',
+                        generateLabels: (chart) => {
+                            const datasets = chart.data.datasets;
+                            return datasets[0].data.map((data, i) => ({
+                                text: `${chart.data.labels[i]}  (${data})`,
+                                fillStyle: datasets[0].backgroundColor[i],
+                                strokeStyle: 'transparent',
+                                index: i
+                            }))
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    const attrObserver = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+            if (mutation.type !== "attributes" && mutation.attributeName !== "class") return;
+            if (mutation.target.classList.contains('dark-theme')) {
+                chartProject.options.plugins.legend.title.color = '#f1f2f3';
+                chartProject.update();
+            } else {
+                chartProject.options.plugins.legend.title.color = '#232529';
+                chartProject.update();
+            }
+        });
+    });
+    attrObserver.observe(document.body, {attributes: true});
 </script>
 <script src="../assets/js/admin.js"></script>
 </body>

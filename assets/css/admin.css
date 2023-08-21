@@ -288,6 +288,9 @@ fieldset {
 .ml-3 {
     margin-left: var(--size-3) !important;
 }
+.pr-0 {
+    padding-right: 0 !important;
+}
 .pr-1 {
     padding-right: var(--size-1) !important;
 }
@@ -309,14 +312,24 @@ fieldset {
 .p-3 {
     padding: var(--size-3) !important;
 }
+.px-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 .px-1 {
-    padding: 0 var(--size-1) !important;
+    padding-left: var(--size-1) !important;
+    padding-right: var(--size-1) !important;
 }
 .px-2 {
-    padding: 0 var(--size-2) !important;
+    padding-left: var(--size-2) !important;
+    padding-right: var(--size-2) !important;
 }
 .px-3 {
-    padding: 0 var(--size-3) !important;
+    padding-left: var(--size-3) !important;
+    padding-right: var(--size-3) !important;
+}
+.pl-0 {
+    padding-left: 0 !important;
 }
 .pl-1 {
     padding-left: var(--size-1) !important;
@@ -327,6 +340,9 @@ fieldset {
 .pl-3 {
     padding-left: var(--size-3) !important;
 }
+.pb-0 {
+    padding-bottom: 0 !important;
+}
 .pb-1 {
     padding-bottom: var(--size-1) !important;
 }
@@ -335,6 +351,9 @@ fieldset {
 }
 .pb-3 {
     padding-bottom: var(--size-3) !important;
+}
+.pt-0 {
+    padding-top: 0 !important;
 }
 .pt-1 {
     padding-top: var(--size-1) !important;
@@ -347,6 +366,12 @@ fieldset {
 }
 .line-height-1 {
     line-height: 1;
+}
+.line-height-1-25 {
+    line-height: 1.25;
+}
+.line-height-1-5 {
+    line-height: 1.5;
 }
 
 .display-grid {
@@ -923,7 +948,7 @@ body {
     padding: 0 20px 20px;
 }
 .header {
-    padding: 0 1.2rem;
+    padding: 0.25rem 1.2rem 0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -940,6 +965,7 @@ body {
     padding: 10px;
     align-items: center;
     display: flex;
+    color: var(--title-color);
 }
 .header__nav-icon {
     font-size: var(--h3-font-size);
@@ -959,6 +985,7 @@ body {
     font-size: var(--h2-font-size);
     cursor: pointer;
     color: var(--title-color);
+    line-height: 1;
 }
 .content-wrapper {
     min-width: 100%;
