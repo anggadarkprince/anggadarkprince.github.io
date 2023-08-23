@@ -22,6 +22,10 @@ menuToggle.addEventListener('click', e => {
     sidebar.classList.toggle('sidebar-collapse');
     localStorage.setItem('sidebar-collapse', sidebar.classList.contains('sidebar-collapse') ? '1' : '0');
 });
+if (localStorage.getItem('sidebar-collapse') === '1') {
+    sidebar.classList.add('sidebar-collapse');
+}
+
 
 /*---------- TABLE RESPONSIVE ----------*/
 const setViewport = function() {

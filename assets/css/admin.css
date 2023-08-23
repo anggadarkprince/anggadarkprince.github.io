@@ -25,13 +25,14 @@
     --text-color: hsl(var(--hue-color), 8%, 20%);
     --text-color-light: hsl(var(--hue-color), 8%, 70%);
     --text-color-lighter: hsl(var(--hue-color), 8%, 85%);
-    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --input-color: hsl(var(--hue-color), 70%, 97%);
     --input-color-darker: hsl(var(--hue-color), 70%, 90%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
     --container-color: #fff;
     --container-color-light: hsl(var(--hue-color), 5%, 90%);
     --container-color-lighter: hsl(var(--hue-color), 8%, 97%);
     --color-red: #b91c1c;
+    --color-shadow: #5779e033;
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -41,6 +42,7 @@
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1.125rem;
+    --large-font-size: 1.1rem;
     --normal-font-size: .89rem;
     --small-font-size: .8rem;
     --smaller-font-size: .68rem;
@@ -76,6 +78,7 @@
         --h1-font-size: 2.25rem;
         --h2-font-size: 1.5rem;
         --h3-font-size: 1.25rem;
+        --large-font-size: 1.15rem;
         --normal-font-size: .95rem;
         --small-font-size: .87rem;
         --smaller-font-size: .72rem;
@@ -139,6 +142,14 @@ img {
 }
 fieldset {
     border: none;
+}
+fieldset ~ fieldset {
+    margin-top: 20px;
+}
+fieldset legend {
+    margin-bottom: 10px;
+    font-weight: var(--font-medium);
+    font-size: var(--large-font-size);
 }
 
 /*==================== REUSABLE CLASSES ====================*/
@@ -441,6 +452,22 @@ fieldset {
     gap: var(--size-5);
 }
 
+.column-gap-1 {
+    column-gap: var(--size-1);
+}
+.column-gap-2 {
+    column-gap: var(--size-2);
+}
+.column-gap-3 {
+    column-gap: var(--size-3);
+}
+.column-gap-4 {
+    column-gap: var(--size-4);
+}
+.column-gap-5 {
+    column-gap: var(--size-5);
+}
+
 .text-center {
     text-align: center;
 }
@@ -470,7 +497,7 @@ fieldset {
 }
 
 .shadow {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px var(--color-shadow);
 }
 .position-relative {
     position: relative;
@@ -505,6 +532,11 @@ fieldset {
     transition: 0.2s;
     height: 40px;
 }
+
+textarea.form__input {
+    height: auto;
+}
+
 .form__input-icon {
     position: absolute;
     padding: 0 12px;
@@ -515,6 +547,7 @@ fieldset {
 }
 .form__input:focus {
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 .2rem var(--color-shadow);
 }
 .form__input::placeholder {
     color: var(--text-color-light);
@@ -528,11 +561,12 @@ fieldset:disabled .form__input {
 /*==================== FORM: BUTTONS ====================*/
 .button {
     display: inline-block;
-    justify-content: center;
+    text-align: center;
     background-color: var(--primary-color);
     color: #fff;
     padding: 0.4rem 0.8rem;
-    border-radius: 0.4rem;
+    border-radius: 0.3rem;
+    height: 40px;
     font-weight: var(--font-medium);
     border: none;
     font-size: var(--normal-font-size);
@@ -765,7 +799,7 @@ fieldset:disabled .button {
     color: var(--text-color);
     background-color: var(--container-color);
     background-clip: padding-box;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px var(--color-shadow);
     border-radius: .3rem;
     transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
     transform: translateY(0.5rem);
@@ -991,7 +1025,19 @@ body {
     min-width: 100%;
 }
 .content {
+    min-height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+}
+.page-content {
     padding: 1.2rem;
+    width: 100%;
+    flex: 1 0 auto;
+}
+.footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--container-color-lighter);
+    font-size: var(--small-font-size);
 }
 
 .section__title {
@@ -1108,7 +1154,7 @@ body {
         top: 0;
         border-radius: 5px;
         background: var(--container-color);
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 -1px 4px var(--color-shadow);
         z-index: 100;
     }
     .sidebar-collapse .nav__item:hover > .nav__list .nav__text,
@@ -1167,7 +1213,7 @@ body {
         top: 0;
         border-radius: 5px;
         background: var(--container-color);
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 -1px 4px var(--color-shadow);
         z-index: 100;
     }
     .nav__item:hover > .nav__list .nav__text,

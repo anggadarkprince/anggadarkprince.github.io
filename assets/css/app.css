@@ -183,6 +183,7 @@ fieldset:disabled .button {
 }
 .button:hover {
     background-color: var(--primary-color-alt);
+    color: #fff;
 }
 .button--white {
     background-color: #fff;

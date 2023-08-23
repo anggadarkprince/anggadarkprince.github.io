@@ -47,7 +47,7 @@
 </head>
 <body>
 <main class="main">
-    <nav class="sidebar sidebar-collapse">
+    <nav class="sidebar">
         <a href="../index.html" class="nav__logo">
             <img src="../assets/img/favicon.png" alt="Logo" class="mr-0-5">
             <strong>Dash</strong>Board
@@ -65,12 +65,12 @@
         <ul class="nav__list">
             <li class="nav__section">Main Menu</li>
             <li class="nav__item">
-                <a href="#" class="nav__link active-link">
+                <a href="dashboard.html" class="nav__link active-link">
                     <i class="nav__icon uil-estate"></i> <span class="nav__text">Home</span>
                 </a>
             </li>
             <li class="nav__item">
-                <a href="#" class="nav__link">
+                <a href="about.html" class="nav__link">
                     <i class="nav__icon uil-user"></i> <span class="nav__text">About</span>
                 </a>
             </li>
@@ -188,99 +188,111 @@
             </ul>
         </header>
         <div class="content">
-            <div class="mb-2">
-                <h1 class="section__title">Dashboard</h1>
-                <p class="section__subtitle">Insight about the website</p>
-            </div>
-            <div>
-                <div class="button__group mb-1">
-                    <a href="#" class="button button__small button__white active">12 Months</a>
-                    <a href="#" class="button button__small button__white">30 Days</a>
-                    <a href="#" class="button button__small button__white">7 Days</a>
-                    <a href="#" class="button button__small button__white display-none display-md-inline-block">24 Hours</a>
-                    <a href="#" class="button button__small button__white">All</a>
+            <div class="page-content">
+                <div class="mb-2">
+                    <h1 class="section__title">Dashboard</h1>
+                    <p class="section__subtitle">Insight about the website</p>
                 </div>
-                <div class="display-grid col-lg-3 gap-1 mb-2">
-                    <div class="card bg-primary color-white overflow-hidden p-0">
-                        <div class="px-2 pt-1">
-                            <h1 class="card__title mb-0-5">Visitor Hits <i class="uil-bolt-alt mr-0-5"></i></h1>
-                            <h2 class="text-h1 weight-medium line-height-1">12.334</h2>
-                        </div>
-                        <canvas id="chart-visitor" height="100px"></canvas>
-                        <a href="#" class="display-flex flex-align-center mt-auto px-2 pb-1">
-                            Visit Total <i class="uil-arrow-right ml-auto text-h3"></i>
-                        </a>
+                <div>
+                    <div class="button__group mb-1">
+                        <a href="#" class="button button__small button__white active">12 Months</a>
+                        <a href="#" class="button button__small button__white">30 Days</a>
+                        <a href="#" class="button button__small button__white">7 Days</a>
+                        <a href="#" class="button button__small button__white display-none display-md-inline-block">24 Hours</a>
+                        <a href="#" class="button button__small button__white">All</a>
                     </div>
-                    <div class="card">
-                        <h1 class="card__title mb-1"><i class="uil-bag mr-0-5"></i>Project Request</h1>
-                        <canvas id="chart-project" height="80px"></canvas>
-                    </div>
-                    <div class="display-grid col-md-2 col-lg-1 gap-1">
-                        <div class="card">
-                            <h1 class="card__title"><i class="uil-image-plus mr-0-5"></i>Portfolio</h1>
-                            <h2 class="text-h2 weight-medium mt-auto">12</h2>
-                            <a href="#" class="display-flex flex-align-center text-fade">Projects <i class="uil-arrow-right ml-auto text-h3"></i></a>
+                    <div class="display-grid col-lg-3 gap-1 mb-2">
+                        <div class="card bg-primary color-white overflow-hidden p-0">
+                            <div class="px-2 pt-1">
+                                <h1 class="card__title mb-0-5">Visitor Hits <i class="uil-bolt-alt mr-0-5"></i></h1>
+                                <h2 class="text-h1 weight-medium line-height-1">12.334</h2>
+                            </div>
+                            <canvas id="chart-visitor" height="100px"></canvas>
+                            <a href="#" class="display-flex flex-align-center mt-auto px-2 pb-1">
+                                Visit Total <i class="uil-arrow-right ml-auto text-h3"></i>
+                            </a>
                         </div>
                         <div class="card">
-                            <h1 class="card__title"><i class="uil-file-alt mr-0-5"></i>Expertises</h1>
-                            <h2 class="text-h2 weight-medium mt-auto">16</h2>
-                            <a href="#" class="display-flex flex-align-center text-fade">Skills <i class="uil-arrow-right ml-auto text-h3"></i></a>
+                            <h1 class="card__title mb-1"><i class="uil-bag mr-0-5"></i>Project Request</h1>
+                            <canvas id="chart-project" height="80px"></canvas>
+                        </div>
+                        <div class="display-grid col-md-2 col-lg-1 gap-1">
+                            <div class="card">
+                                <h1 class="card__title"><i class="uil-image-plus mr-0-5"></i>Portfolio</h1>
+                                <h2 class="text-h2 weight-medium mt-auto">12</h2>
+                                <a href="#" class="display-flex flex-align-center text-fade">Projects <i class="uil-arrow-right ml-auto text-h3"></i></a>
+                            </div>
+                            <div class="card">
+                                <h1 class="card__title"><i class="uil-file-alt mr-0-5"></i>Expertises</h1>
+                                <h2 class="text-h2 weight-medium mt-auto">16</h2>
+                                <a href="#" class="display-flex flex-align-center text-fade">Skills <i class="uil-arrow-right ml-auto text-h3"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <h4 class="mb-0-5">Contact Messages</h4>
-                <div class="form__input-group mb-0-5">
-                    <label class="uil-search form__input-icon" for="input-search"></label>
-                    <input type="search" name="search" class="form__input" id="input-search" placeholder="Search message...">
+                    <h4 class="mb-0-5">Contact Messages</h4>
+                    <div class="form__input-group mb-0-5">
+                        <label class="uil-search form__input-icon" for="input-search"></label>
+                        <input type="search" name="search" class="form__input" id="input-search" placeholder="Search message...">
+                    </div>
+                    <table class="table table__border table__responsive mb-2">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Project</th>
+                            <th>Message</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Keenan Evander</td>
+                            <td>keenan.evander@gmail.com</td>
+                            <td>Mobile Design</td>
+                            <td>We need to develop e-commerce and support for mobile data...</td>
+                            <td><span class="label label__white">PENDING</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Diana Eka</td>
+                            <td>diana.wulanda@gmail.com</td>
+                            <td>Web Development</td>
+                            <td>Super app for laundry app...</td>
+                            <td><span class="label label__success">REPLIED</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Marry Fina</td>
+                            <td>merry@gmail.com</td>
+                            <td>Advertising</td>
+                            <td>Give me some advise</td>
+                            <td><span class="label label__error">REJECTED</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Agirna Wurana</td>
+                            <td>agirna@gmail.com</td>
+                            <td>UI Design</td>
+                            <td>We need wesome UI</td>
+                            <td><span class="label label__warning">HOLD</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <table class="table table__border table__responsive mb-2">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Project</th>
-                        <th>Message</th>
-                        <th>Status</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Keenan Evander</td>
-                        <td>keenan.evander@gmail.com</td>
-                        <td>Mobile Design</td>
-                        <td>We need to develop e-commerce and support for mobile data...</td>
-                        <td><span class="label label__white">PENDING</span></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Diana Eka</td>
-                        <td>diana.wulanda@gmail.com</td>
-                        <td>Web Development</td>
-                        <td>Super app for laundry app...</td>
-                        <td><span class="label label__success">REPLIED</span></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Marry Fina</td>
-                        <td>merry@gmail.com</td>
-                        <td>Advertising</td>
-                        <td>Give me some advise</td>
-                        <td><span class="label label__error">REJECTED</span></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Agirna Wurana</td>
-                        <td>agirna@gmail.com</td>
-                        <td>UI Design</td>
-                        <td>We need wesome UI</td>
-                        <td><span class="label label__warning">HOLD</span></td>
-                    </tr>
-                    </tbody>
-                </table>
             </div>
+            <footer class="footer">
+                <div class="display-flex flex-justify-between">
+                    <span class="text-fade">
+                        Copyright © 2023 <a href="#" target="_blank">Angga Ari Wijaya</a> all rights reserved.
+                    </span>
+                    <span class="text-fade">
+                        Hand-crafted &amp; made with <i class="uil-heart color-error"></i>
+                    </span>
+                </div>
+            </footer>
         </div>
     </section>
 </main>
