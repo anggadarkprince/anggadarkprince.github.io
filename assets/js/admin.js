@@ -93,6 +93,7 @@ function closeAllDropdowns(exceptElement = null) {
 }
 const dropdownToggles = document.querySelectorAll('.dropdown__toggle');
 dropdownToggles.forEach(dropdownToggle => dropdownToggle.addEventListener('click', e => {
+    e.preventDefault();
     e.stopPropagation();
     closeAllDropdowns(e.currentTarget.closest('.dropdown'));
     toggleDropdown(dropdownToggle.closest('.dropdown'));
@@ -101,6 +102,42 @@ dropdownToggles.forEach(dropdownToggle => dropdownToggle.addEventListener('click
 document.documentElement.addEventListener("click", function () {
     closeAllDropdowns();
 });
+
+/*---------- MODAL ----------*/
+const modalToggles = document.querySelectorAll('.modal__toggle');
+modalToggles.forEach(modalToggle => modalToggle.addEventListener('click', e => {
+    e.preventDefault();
+    const targetModal = modalToggle.getAttribute('href') || modalToggle.dataset.modal;
+    if (targetModal) {
+        const modal = document.querySelector(targetModal);
+        if (modal) {
+            if (modal.classList.contains('show')) {
+                modal.classList.remove('show');
+                const modalOverlay = document.querySelector(`.modal__overlay[data-ref="${targetModal}"]`);
+                if (modalOverlay) {
+                    modalOverlay.remove();
+                }
+            } else {
+                modal.classList.add('show');
+                modal.dataset.ref = targetModal;
+                document.body.insertAdjacentHTML('beforeend', `<div class="modal__overlay show" data-ref="${targetModal}"></div>`);
+            }
+        }
+    }
+}));
+const modalCloses = document.querySelectorAll('[data-close="modal"]');
+modalCloses.forEach(modalClose => modalClose.addEventListener('click', e => {
+    e.preventDefault();
+    const targetModal = modalClose.closest('.modal');
+    if (targetModal) {
+        targetModal.classList.remove('show');
+        const targetRef = targetModal.dataset.ref;
+        const modalOverlay = document.querySelector(`.modal__overlay[data-ref="${targetRef}"]`);
+        if (modalOverlay) {
+            modalOverlay.remove();
+        }
+    }
+}));
 
 /*---------- DARK THEME ----------*/
 const themeButton = document.getElementById("theme-button");

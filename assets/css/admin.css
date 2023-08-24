@@ -18,11 +18,14 @@
     --secondary-color-alt: hsl(var(--hue-color-secondary), 70%, 55%);
     --secondary-color-lighter: hsl(var(--hue-color-secondary), 92%, 85%);
     --error-color: #d54f4f;
+    --error-color-lighter: #ffbbbb;
     --success-color: #22c55e;
+    --success-color-lighter: #a1ffc5;
     --warning-color: #fb923c;
     --info-color: #0ea5e9;
-    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --title-color: hsl(var(--hue-color), 8%, 10%);
     --text-color: hsl(var(--hue-color), 8%, 20%);
+    --text-color-slate: hsl(var(--hue-color), 8%, 45%);
     --text-color-light: hsl(var(--hue-color), 8%, 70%);
     --text-color-lighter: hsl(var(--hue-color), 8%, 85%);
     --input-color: hsl(var(--hue-color), 70%, 97%);
@@ -89,6 +92,7 @@
 body.dark-theme {
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 75%);
+    --text-color-slate: hsl(var(--hue-color), 8%, 55%);
     --text-color-light: hsl(var(--hue-color), 8%, 40%);
     --text-color-lighter: hsl(var(--hue-color), 8%, 30%);
     --input-color: hsl(var(--hue-color), 29%, 16%);
@@ -400,6 +404,9 @@ fieldset legend {
 .display-inline-block {
     display: inline-block !important;
 }
+.flex-row {
+    flex-direction: row !important;
+}
 .flex-column {
     flex-direction: column !important;
 }
@@ -422,6 +429,12 @@ fieldset legend {
 }
 .text-h3 {
     font-size: var(--h3-font-size) !important;
+}
+.text-large {
+    font-size: var(--large-font-size) !important;
+}
+.text-normal {
+    font-size: var(--normal-font-size) !important;
 }
 .text-small {
     font-size: var(--small-font-size) !important;
@@ -483,7 +496,7 @@ fieldset legend {
     white-space: nowrap;
 }
 .collapse:not(.open) {
-    display: none;
+    display: none !important;
 }
 
 .overflow-hidden {
@@ -499,11 +512,26 @@ fieldset legend {
 .shadow {
     box-shadow: 0 1px 4px var(--color-shadow);
 }
+.shadow-lg {
+    box-shadow: 0 0 0 0 var(--color-shadow), 0 4px 16px 0 var(--color-shadow);
+}
 .position-relative {
     position: relative;
 }
 .position-static {
     position: static;
+}
+
+.border-0 {
+    border: none !important;
+}
+
+.list-separator > * {
+    border-bottom: 1px solid var(--text-color-lighter);
+}
+
+.list-separator > *:last-child {
+    border-bottom: none;
 }
 
 /*==================== FORM ====================*/
@@ -516,7 +544,7 @@ fieldset legend {
 }
 .form__label {
     margin-bottom: var(--size-0-25);
-    display: block;
+    display: inline-block;
     color: var(--title-color);
 }
 .form__input {
@@ -561,17 +589,21 @@ fieldset:disabled .form__input {
 /*==================== FORM: BUTTONS ====================*/
 .button {
     display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
     text-align: center;
     background-color: var(--primary-color);
     color: #fff;
-    padding: 0.4rem 0.8rem;
-    border-radius: 0.3rem;
+    padding: 0.531rem 0.85rem;
     height: 40px;
+    border-radius: 0.3rem;
     font-weight: var(--font-medium);
     border: none;
     font-size: var(--normal-font-size);
     font-family: var(--body-font);
     transition: 0.2s;
+    cursor: pointer;
 }
 .button:disabled,
 .button.disabled,
@@ -600,15 +632,39 @@ fieldset:disabled .button {
     background-color: var(--container-color-lighter);;
     color: var(--text-color-light);
 }
+.button__success {
+    background-color: var(--success-color);
+}
+.button__success:hover,
+.button__success.active {
+    background-color: var(--success-color-lighter);
+}
+.button__success:disabled,
+.button__success.disabled {
+    background-color: var(--success-color-lighter);;
+}
+.button__danger {
+    background-color: var(--error-color);
+}
+.button__danger:hover,
+.button__danger.active {
+    background-color: var(--error-color-lighter);
+}
+.button__danger:disabled,
+.button__danger.disabled {
+    background-color: var(--error-color-lighter);;
+}
 .button__small {
-    padding: 0.3rem 0.7rem;
+    padding: 0.3rem 0.6rem;
     font-size: var(--small-font-size);
     border-radius: 0.3rem;
+    height: max-content;
 }
 .button__smaller {
-    padding: 0.25rem 0.55rem;
+    padding: 0.25rem 0.45rem;
     font-size: var(--smaller-font-size);
     border-radius: 0.15rem;
+    height: max-content;
 }
 .button__large {
     padding: 0.45rem 0.85rem;
@@ -639,8 +695,12 @@ fieldset:disabled .button {
     border-bottom-right-radius: 0;
 }
 
+/*==================== FORM: RADIO ====================*/
+
+
 /*==================== FORM: CHECKBOX ====================*/
-.form__checkbox {
+.form__checkbox,
+.form__radio {
     display: inline-block;
     position: relative;
     padding-left: 30px;
@@ -648,17 +708,24 @@ fieldset:disabled .button {
     color: var(--text-color);
     line-height: 20px;
 }
-.form__checkbox input {
+.form__checkbox input,
+.form__radio input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
 }
-.form__checkbox label {
-    display: flex;
+.form__checkbox label,
+.form__radio label {
+    display: inline-block;
 }
-.form__checkbox label:before {
+.form__radio ~ .form__radio,
+.form__checkbox ~ .form__checkbox {
+    margin-left: 15px;
+}
+.form__checkbox label:before,
+.form__radio label:before {
     content: "";
     position: absolute;
     top: 0;
@@ -667,20 +734,29 @@ fieldset:disabled .button {
     width: 16px;
     border-radius: 3px;
     background-color: var(--input-color);
-    border: 2px solid transparent;
+    border: 2px solid var(--primary-color-lighter);
+}
+
+.form__radio label:before {
+    border-radius: 50%;
 }
 
 /* On mouse-over, add a grey background color */
-.form__checkbox:hover input ~ label:before {
+.form__checkbox:hover input ~ label:before,
+.form__radio:hover input ~ label:before {
     background-color: var(--input-color-darker);
 }
 
 /* When the checkbox is checked, add background */
-.form__checkbox input:checked ~ label:before {
+.form__checkbox input:checked ~ label:before,
+.form__radio input:checked ~ label:before {
     background-color: var(--primary-color);
+    border-color: transparent;
 }
-.form__checkbox input:focus ~ label:before {
+.form__checkbox input:focus ~ label:before,
+.form__radio input:focus ~ label:before {
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 .2rem var(--color-shadow);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -696,14 +772,26 @@ fieldset:disabled .button {
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
 }
+.form__radio label:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+}
 
-.form__checkbox input:checked ~ label:after {
+.form__checkbox input:checked ~ label:after,
+.form__radio input:checked ~ label:after {
     display: block;
 }
 
 /*==================== CARD ====================*/
 .card {
-    border-radius: 0.4rem;
+    border-radius: 0.3rem;
     padding: var(--size-1);
     border: 1px solid var(--text-color-lighter);
     display: flex;
@@ -723,6 +811,55 @@ fieldset:disabled .button {
     border-color: transparent;
 }
 
+
+/*==================== MODAL ====================*/
+.modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1051;
+    display: none;
+    outline: 0;
+    transition: opacity .15s linear;
+}
+.modal.show {
+    display: block;
+}
+.modal__wrapper {
+    max-width: 500px;
+    margin: 1.8rem auto;
+    background-color: var(--body-color);
+    border-radius: 0.3rem;
+}
+.modal__overlay {
+    z-index: 1050;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transition: opacity .15s linear;
+}
+.modal__overlay.show {
+    opacity: .5;
+}
+.modal__close {
+    background-color: transparent;
+    border: 0;
+    padding: 0.5rem;
+    float: right;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.modal__content {
+    padding: 1.3rem;
+}
 
 /*==================== LABEL ====================*/
 .label {
@@ -832,7 +969,7 @@ fieldset:disabled .button {
     overflow: hidden;
     border-top: 1px solid var(--container-color-lighter);
 }
-.dropdown__toggle:after {
+.dropdown__toggle:not(.dropdown__no-arrow):after {
     content: '\eb3a';
     font-family: unicons-line;
     font-style: normal;
@@ -844,9 +981,13 @@ fieldset:disabled .button {
     font-variant: normal;
     text-transform: none;
     transition: 0.2s ease;
+    vertical-align: middle;
 }
 .dropdown.open .dropdown__toggle:after {
     transform: rotate(180deg);
+}
+.dropdown__menu-tight {
+    top: 30px;
 }
 
 /*==================== LAYOUT ====================*/
@@ -975,6 +1116,9 @@ body {
     transition: 0.2s;
 }
 .nav__link:not(.collapsed) .nav__arrow:before {
+    transform: rotate(90deg);
+}
+.action-toggle:not(.collapsed) .action-toggle-arrow:before {
     transform: rotate(90deg);
 }
 .nav__footer {
@@ -1341,4 +1485,43 @@ body {
     .display-lg-flex {
         display: block !important;
     }
+}
+
+
+/*==================== PAGE ====================*/
+.expertise__item {
+    margin-bottom: 1.5rem;
+}
+.expertise__icon {
+    font-size: var(--h1-font-size);
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+.expertise__header {
+    margin-bottom: var(--size-0-5);
+}
+.expertise__subtitle {
+    font-size: var(--small-font-size);
+    color: var(--text-color-slate);
+}
+.expertise__level {
+    margin-top: 5px;
+}
+.expertise__level-item {
+    margin-left: 5px;
+}
+.expertise__level-item:first-child {
+    margin-left: 0;
+}
+.circle-filled,
+.circle-muted {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    display: inline-block;
+}
+.circle-muted,
+.circle-muted {
+    background: var(--primary-color-lighter);
 }
