@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="Angga Ari Wijaya">
+    <meta name="url" content="https://www.angga-ari.com">
+    <meta name="keyword" content="angga, ari, wijaya, personal, programmer, freelance, designer, illustrator, web, android, desktop, java, php, react, transcon, transcon indonesia">
+    <meta name="description" content="Angga Ari Wijaya personal website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#161A27">
+
+    <title>Message | Angga Ari Wijaya</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="../assets/img/favicon.png" rel="shortcut icon">
+</head>
+<body>
+<main class="main">
+    <nav class="sidebar">
+        <a href="../index.html" class="nav__logo">
+            <img src="../assets/img/favicon.png" alt="Logo" class="mr-0-5">
+            <strong>Dash</strong>Board
+        </a>
+        <a href="../index.html" class="nav__logo-mini">
+            <img src="../assets/img/favicon.png" alt="Logo">
+        </a>
+        <div class="nav__user">
+            <img src="../assets/img/profile.jpg" alt="Profile" class="nav__avatar">
+            <div class="nav__user-info truncate">
+                <h4 class="nav__profile-name">Angga Ari Wijaya</h4>
+                <p class="nav__profile-email truncate">angga.aw92@gmail.com</p>
+            </div>
+        </div>
+        <ul class="nav__list">
+            <li class="nav__section">Main Menu</li>
+            <li class="nav__item">
+                <a href="dashboard.html" class="nav__link">
+                    <i class="nav__icon uil-estate"></i> <span class="nav__text">Home</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="about.html" class="nav__link">
+                    <i class="nav__icon uil-user"></i> <span class="nav__text">About</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="expertises.html" class="nav__link">
+                    <i class="nav__icon uil-file-alt"></i> <span class="nav__text">Expertises</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="experiences.html" class="nav__link">
+                    <i class="nav__icon uil-bag"></i> <span class="nav__text">Experiences</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="showcases.html" class="nav__link">
+                    <i class="nav__icon uil-image-plus"></i> <span class="nav__text">Showcases</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="messages.html" class="nav__link active-link">
+                    <i class="nav__icon uil-at"></i> <span class="nav__text">Messages</span>
+                </a>
+            </li>
+            <li class="nav__section">Preferences</li>
+            <li class="nav__item">
+                <a href="#sub-setting" class="nav__link action-toggle collapsed">
+                    <i class="nav__icon uil-setting"></i>
+                    <span class="nav__text">Settings</span>
+                    <i class="nav__arrow"></i>
+                </a>
+                <ul class="nav__list collapse" id="sub-setting">
+                    <li class="nav__item">
+                        <a href="setting-general.html" class="nav__link">
+                            <i class="nav__icon uil-web-grid"></i> <span class="nav__text">General</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="setting-account.html" class="nav__link">
+                            <i class="nav__icon uil-user-square"></i> <span class="nav__text">Account</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="setting-password.html" class="nav__link">
+                            <i class="nav__icon uil-lock"></i> <span class="nav__text">Password</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="login.html" class="nav__link">
+                    <i class="nav__icon uil-signout color-aggressive"></i>
+                    <span class="nav__text color-aggressive">Sign Out</span>
+                </a>
+            </li>
+        </ul>
+        <div class="nav__footer mt-auto">
+            <button class="button button__white button__small" id="theme-button">
+                <i class="uil-moon"></i><span class="nav__text ml-0-5">Dark Theme</span>
+            </button>
+            <div class="nav__copyright">
+                <small class="mt-1 display-block line-height-1">&copy; 2023 all rights reserved</small>
+                <small class="text-fade text-smaller">Version 1.0 - builds 20230811</small>
+            </div>
+        </div>
+    </nav>
+    <section class="content-wrapper">
+        <header class="header">
+            <button type="button" class="button__menu-toggle">
+                <i class="uil-bars"></i>
+            </button>
+            <ul class="header__nav">
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">
+                        <i class="uil-search header__nav-icon"></i>
+                    </a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="#" class="header__nav-link">
+                        <i class="uil-inbox header__nav-icon"></i>
+                    </a>
+                </li>
+                <li class="header__nav-item dropdown notification__dropdown">
+                    <a href="#" class="header__nav-link dropdown__toggle">
+                        <i class="uil-comment-alt-dots header__nav-icon"></i>
+                    </a>
+                    <div class="dropdown__menu dropdown__menu-right notification__dropdown-menu overflow-hidden">
+                        <div class="display-flex flex-align-center flex-justify-between p-1 shadow position-relative">
+                            <h4>Notifications</h4>
+                            <a href="#">Mark all as read</a>
+                        </div>
+                        <div class="notification__dropdown-list">
+                            <a class="dropdown__item notification__dropdown-item" href="#">
+                                <p><strong>Herry</strong> send a message about project <string>Web Development</string></p>
+                                <small class="text-fade">1 hour ago</small>
+                            </a>
+                            <a class="dropdown__item notification__dropdown-item" href="#">
+                                <p><strong>Bory</strong> send a message about project <string>Mobile App</string></p>
+                                <small class="text-fade">1 hour ago</small>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="header__nav-item dropdown">
+                    <a href="#" class="header__nav-link dropdown__toggle pr-0">
+                        <img src="../assets/img/profile.jpg" alt="Profile" class="header__nav-avatar">
+                        My Account
+                    </a>
+                    <div class="dropdown__menu dropdown__menu-right">
+                        <a class="dropdown__item" href="#"><i class="uil-user mr-0-25"></i> My Account</a>
+                        <a class="dropdown__item" href="#"><i class="uil-lock mr-0-25"></i> Change Password</a>
+                        <div class="dropdown__divider"></div>
+                        <a class="dropdown__item" href="../login.html"><i class="uil-signout mr-0-25"></i> Sign Out</a>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="page-content">
+                <div class="mb-1 display-flex flex-justify-between">
+                    <div>
+                        <h1 class="section__title">Messages</h1>
+                        <p class="section__subtitle">Contact message and project</p>
+                    </div>
+                    <a href="#" class="button button__white">
+                        Download CSV <i class="uil-cloud-download"></i>
+                    </a>
+                </div>
+
+                <table class="table table__border table__responsive mb-2">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Project</th>
+                        <th>Message</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Keenan Evander</td>
+                        <td>keenan.evander@gmail.com</td>
+                        <td>Mobile Design</td>
+                        <td>We need to develop e-commerce and support for mobile data...</td>
+                        <td><span class="label label__white">PENDING</span></td>
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="button button__small dropdown__toggle">
+                                    Action
+                                </button>
+                                <div class="dropdown__menu dropdown__menu-right">
+                                    <a class="dropdown__item" href="#"><i class="uil-search mr-0-25"></i> View</a>
+                                    <a class="dropdown__item" href="#"><i class="uil-envelope-upload mr-0-25"></i> Reply</a>
+                                    <a class="dropdown__item modal__toggle" href="#modal-delete"><i class="uil-trash mr-0-25"></i> Delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Diana Eka</td>
+                        <td>diana.wulanda@gmail.com</td>
+                        <td>Web Development</td>
+                        <td>Super app for laundry app...</td>
+                        <td><span class="label label__success">REPLIED</span></td>
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="button button__small dropdown__toggle">
+                                    Action
+                                </button>
+                                <div class="dropdown__menu dropdown__menu-right">
+                                    <a class="dropdown__item" href="#"><i class="uil-search mr-0-25"></i> View</a>
+                                    <a class="dropdown__item" href="#"><i class="uil-envelope-upload mr-0-25"></i> Edit</a>
+                                    <a class="dropdown__item modal__toggle" href="#modal-delete"><i class="uil-trash mr-0-25"></i> Delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Marry Fina</td>
+                        <td>merry@gmail.com</td>
+                        <td>Advertising</td>
+                        <td>Give me some advise</td>
+                        <td><span class="label label__error">REJECTED</span></td>
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="button button__small dropdown__toggle">
+                                    Action
+                                </button>
+                                <div class="dropdown__menu dropdown__menu-right">
+                                    <a class="dropdown__item" href="#"><i class="uil-search mr-0-25"></i> View</a>
+                                    <a class="dropdown__item" href="#"><i class="uil-envelope-upload mr-0-25"></i> Edit</a>
+                                    <a class="dropdown__item modal__toggle" href="#modal-delete"><i class="uil-trash mr-0-25"></i> Delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Agirna Wurana</td>
+                        <td>agirna@gmail.com</td>
+                        <td>UI Design</td>
+                        <td>We need wesome UI</td>
+                        <td><span class="label label__warning">HOLD</span></td>
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="button button__small dropdown__toggle">
+                                    Action
+                                </button>
+                                <div class="dropdown__menu dropdown__menu-right">
+                                    <a class="dropdown__item" href="#"><i class="uil-search mr-0-25"></i> View</a>
+                                    <a class="dropdown__item" href="#"><i class="uil-envelope-upload mr-0-25"></i> Edit</a>
+                                    <a class="dropdown__item modal__toggle" href="#modal-delete"><i class="uil-trash mr-0-25"></i> Delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <nav>
+                    <ul class="pagination">
+                        <li class="pagination__item disabled">
+                            <a class="pagination__link">Previous</a>
+                        </li>
+                        <li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
+                        <li class="pagination__item active" aria-current="page">
+                            <a class="pagination__link" href="#">2</a>
+                        </li>
+                        <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+                        <li class="pagination__item">
+                            <a class="pagination__link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <footer class="footer">
+                <div class="display-flex flex-justify-between">
+                    <span class="text-fade">
+                        Copyright © 2023 <a href="#" target="_blank">Angga Ari Wijaya</a> all rights reserved.
+                    </span>
+                    <span class="text-fade">
+                        Hand-crafted &amp; made with <i class="uil-heart color-error"></i>
+                    </span>
+                </div>
+            </footer>
+        </div>
+    </section>
+</main>
+
+<div class="modal" id="modal-form-experience" tabindex="-1" role="dialog">
+    <div class="modal__wrapper">
+        <button type="button" class="modal__close" data-close="modal">
+            <i class="uil-times"></i>
+        </button>
+        <div class="modal__content">
+            <h3 class="mb-1 text-h3">New Experience</h3>
+            <form action="#" method="post">
+                <div class="form__input-group">
+                    <label for="label" class="form__label">Label</label>
+                    <input type="text" placeholder="Eg. High School, Full-time Working" name="label" id="label" class="form__input">
+                </div>
+                <div class="form__input-group">
+                    <label for="title" class="form__label">Title</label>
+                    <input type="text" placeholder="Eg. Software Engineer" name="title" id="title" class="form__input">
+                </div>
+                <div class="form__input-group">
+                    <label for="subtitle" class="form__label">Subtitle</label>
+                    <input type="text" placeholder="Eg. Working location or organization" name="subtitle" id="subtitle" class="form__input">
+                </div>
+                <div class="form__input-group">
+                    <label for="url" class="form__label">URL</label>
+                    <input type="url" placeholder="Related website or url" name="url" id="url" class="form__input">
+                </div>
+                <div class="form__input-group">
+                    <label for="description" class="form__label">Description</label>
+                    <textarea placeholder="Some skill of set description" name="description" id="description" class="form__input"></textarea>
+                </div>
+                <div class="text-right mt-2">
+                    <button type="button" class="button button__white" data-close="modal">Cancel</button>
+                    <button type="submit" class="button">Save Experience</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal-delete" tabindex="-1" role="dialog">
+    <div class="modal__wrapper">
+        <button type="button" class="modal__close" data-close="modal">
+            <i class="uil-times"></i>
+        </button>
+        <div class="modal__content">
+            <form action="#" method="post">
+                <h3 class="mb-1 text-h3">Delete Message</h3>
+                <p>Are you sure want to delete?</p>
+                <div class="text-right mt-2">
+                    <button type="button" class="button button__white" data-close="modal">Cancel</button>
+                    <button type="submit" class="button button__danger">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/admin.js"></script>
+</body>
+</html>
