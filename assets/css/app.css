@@ -28,6 +28,7 @@
     --container-color: #fff;
     --container-color-light: hsl(var(--hue-color), 5%, 90%);
     --container-color-lighter: hsl(var(--hue-color), 8%, 95%);
+    --color-shadow: #5779e033;
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -317,19 +318,19 @@ fieldset:disabled .button {
     color: var(--text-color-lighter);
 }
 .gap-1 {
-    gap: var(--size-1);
+    gap: var(--size-1) !important;
 }
 .gap-2 {
-    gap: var(--size-2);
+    gap: var(--size-2) !important;;
 }
 .gap-3 {
-    gap: var(--size-3);
+    gap: var(--size-3) !important;;
 }
 .gap-4 {
-    gap: var(--size-4);
+    gap: var(--size-4) !important;;
 }
 .gap-5 {
-    gap: var(--size-5);
+    gap: var(--size-5) !important;;
 }
 .text-center {
     text-align: center;

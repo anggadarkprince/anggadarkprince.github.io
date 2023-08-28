@@ -703,7 +703,6 @@ fieldset:disabled .button {
 .form__radio {
     display: inline-block;
     position: relative;
-    padding-left: 30px;
     font-size: var(--normal-font-size);
     color: var(--text-color);
     line-height: 20px;
@@ -719,6 +718,7 @@ fieldset:disabled .button {
 .form__checkbox label,
 .form__radio label {
     display: inline-block;
+    padding-left: 30px;
 }
 .form__radio ~ .form__radio,
 .form__checkbox ~ .form__checkbox {
@@ -833,6 +833,7 @@ fieldset:disabled .button {
     max-width: 500px;
     margin: 1.8rem auto;
     background-color: var(--body-color);
+    box-shadow: 0 2px 5px var(--color-shadow);
     border-radius: 0.3rem;
 }
 .modal__overlay {
@@ -856,6 +857,7 @@ fieldset:disabled .button {
     font-size: 1.5rem;
     line-height: 1;
     cursor: pointer;
+    color: var(--title-color);
 }
 .modal__content {
     padding: 1.3rem;

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="Angga Ari Wijaya">
+    <meta name="url" content="https://www.angga-ari.com">
+    <meta name="keyword" content="angga, ari, wijaya, personal, programmer, freelance, designer, illustrator, web, android, desktop, java, php, react, transcon, transcon indonesia">
+    <meta name="description" content="Angga Ari Wijaya personal website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#161A27">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Angga Ari Wijaya">
+    <meta itemprop="description" content="Angga Ari Wijaya personal website">
+    <meta itemprop="image" content="https://www.angga-ari.com/img/avatar.jpg">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@_anggaari">
+    <meta name="twitter:title" content="Angga Ari Wijaya">
+    <meta name="twitter:description" content="Angga Ari Wijaya personal website">
+    <meta name="twitter:creator" content="@_anggaari">
+    <meta name="twitter:image" content="https://www.angga-ari.com/assets/img/profile.jpg">
+
+    <!-- Open Graph description -->
+    <meta property="og:title" content="Angga Ari Wijaya">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.angga-ari.com/assets/img/profile.jpg">
+    <meta property="og:url" content="https://www.angga-ari.com">
+    <meta property="og:keyword" content="angga, ari, wijaya, personal, programmer, freelance, designer, illustrator, web, android, desktop, java, php, react, transcon, transcon indonesia">
+    <meta property="og:description" content="Angga Ari Wijaya personal website">
+
+    <title>Login | Angga Ari Wijaya</title>
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="../assets/img/favicon.png" rel="shortcut icon">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74498739-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-74498739-2');
+    </script>
+</head>
+<body>
+<main class="main auth__main">
+    <div class="auth__wrapper">
+        <div class="auth__title-wrapper">
+            <img src="../assets/img/favicon.png" alt="Logo" class="auth__logo">
+            <div>
+                <h1 class="auth__title">Welcome back!</h1>
+                <h3 class="auth__subtitle">Start managing your landing page</h3>
+            </div>
+        </div>
+
+        <div class="alert alert-error" style="display: none">
+            Your password do not match
+        </div>
+
+        <form class="auth__form" action="dashboard.html" method="post">
+            <fieldset>
+                <div class="form__input-group">
+                    <label for="input-email" class="form__label">Username</label>
+                    <input type="text" class="form__input" id="input-email" placeholder="Username or email address" name="email" required maxlength="50">
+                </div>
+                <div class="form__input-group">
+                    <label for="input-password" class="form__label">Password</label>
+                    <input type="password" class="form__input" id="input-password" placeholder="Password" name="password" required maxlength="50">
+                </div>
+                <div class="form__input-group grid col-3-2 mb-2">
+                    <div class="form__checkbox">
+                        <input type="checkbox" name="remember" id="input-remember">
+                        <label for="input-remember">Remember for 30 days</label>
+                    </div>
+                    <a href="forgot-password.html" class="text-right">Forgot Password?</a>
+                </div>
+                <button type="submit" class="button width-full">
+                    Sign In
+                </button>
+            </fieldset>
+        </form>
+
+        <p class="separator__or mb-1 mt-1">OR</p>
+
+        <div class="form__input-group grid gap-1 col-lg-2 mb-1">
+            <a href="#" class="button button__social width-full">
+                <img src="../assets/img/google.png" alt="Google">Google
+            </a>
+            <a href="#" class="button button__social width-full">
+                <img src="../assets/img/github.png" alt="Google">Github
+            </a>
+        </div>
+        <p class="text-center">Don't you have an account? <a href="/register">Sign Up</a></p>
+        <p class="text-center text-fade mt-2">&copy; 2023 All Rights Reserved.</p>
+    </div>
+</main>
+
+<a href="#home" class="scroll-up" id="scroll-up">
+    <i class="uil-arrow-up scroll-up__icon"></i>
+</a>
+
+<script src="../assets/js/app.js"></script>
+</body>
+</html>
